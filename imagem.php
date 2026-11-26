@@ -1,0 +1,6 @@
+<?php
+// Ilustração PROVISÓRIA de tênis (usada enquanto não houver foto real em assets/produtos/<slug>.jpg)
+$m = ['branco' => '#f8fafc', 'preto' => '#334155', 'azul' => '#3b82f6', 'cinza' => '#94a3b8', 'verde' => '#22c55e', 'vermelho' => '#ef4444', 'laranja' => '#ea6f0f'];
+$col = $m[mb_strtolower($_GET['c'] ?? '')] ?? '#94a3b8';
+header('Content-Type: image/svg+xml'); header('Cache-Control: public, max-age=86400');
+echo "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'><defs><linearGradient id='g' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='#fff'/><stop offset='1' stop-color='#e8edf3'/></linearGradient></defs><rect width='400' height='400' fill='url(#g)'/><ellipse cx='205' cy='322' rx='150' ry='13' fill='rgba(15,30,60,.12)'/><path d='M60 270 Q60 190 130 180 L190 150 Q230 205 300 205 Q350 210 350 250 L350 285 L60 285Z' fill='$col' stroke='#1a335c' stroke-width='4' stroke-linejoin='round'/><path d='M120 235 Q200 250 340 232' fill='none' stroke='#ea6f0f' stroke-width='9' stroke-linecap='round'/><rect x='55' y='278' width='300' height='28' rx='13' fill='#fff' stroke='#1a335c' stroke-width='4'/><path d='M195 160 L215 185 M178 172 L205 200 M160 182 L190 212' stroke='#1a335c' stroke-width='6' stroke-linecap='round'/></svg>";
